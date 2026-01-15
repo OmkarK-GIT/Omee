@@ -40,7 +40,7 @@ resource "aws_security_group" "web_sg" {
 # 3. EC2 Instance with Nginx Bootstrap
 resource "aws_instance" "app_server" {
   ami           = "ami-0c7217cdde317cfec" # Ubuntu 22.04 LTS (Update for your region!)
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   security_groups = [aws_security_group.web_sg.name]
 
   # This script runs ONCE when the instance boots

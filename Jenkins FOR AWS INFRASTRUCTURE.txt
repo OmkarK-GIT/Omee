@@ -1,0 +1,55 @@
+Jenkins FOR AWS INFRASTRUCTURE
+
+1. Git Commit
+     ↓
+2. Jenkins Pipeline
+     ↓
+3. terraform init
+4. terraform plan
+5. terraform apply
+     ↓
+6. Infrastructure created in AWS
+
+-------------------------------------------------
+
+
+Jenkins FOR CI/CD PIPELINE.
+
+1. Developer pushes code
+        ↓
+2. Jenkins triggers pipeline
+        ↓
+3. Build application
+        ↓
+4. Run unit tests
+        ↓
+5. Build Docker image
+        ↓
+6. Push image to registry
+        ↓
+7. Deploy to Kubernetes
+
+-------------------------------------------------
+
+Daily Tasks
+
+Create and account in AWS under the organization as per the customer requirement. For Account creation we use boto3 Automation and 
+Customer comes with the requirement, With CIDR and Compute resources that he wants to create.
+Accordingly we create the VPCs, Subnets.
+Either they asked for the EC2 server or we can directly configure the Private Lambda as per the requirement, and then they use that particular infra to  deploy the application.
+
+Mostly we got the IAM issue and Resource based policy issue, where customer is not able to access the particular resource because of the resource policy.
+
+For S3, we use the Life cycle management and enable the versioning and Retention as per the customer requirement. 
+
+
+
+We are using the Azure AD for the to use the User management with Local Domain user.  
+
+Also use the Service control policy to Allow/Restrict the access at the Organization level.
+
+
+
+
+
+
